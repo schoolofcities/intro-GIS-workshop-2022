@@ -138,19 +138,19 @@ DEM of Toronto and Lake Ontario (<em>Data from NOAA</em>)</p>
 <h3 id="4---tutorial,-part-ii"><a class="header-link" href="#4---tutorial,-part-ii"></a>4 - Tutorial, Part II</h3>
 <h4 id="lines-and-polygons,-joining-tabular-data,-choropleths"><a class="header-link" href="#lines-and-polygons,-joining-tabular-data,-choropleths"></a>lines and polygons, joining tabular data, choropleths</h4>
 <p>Start up a new QGIS project and add in the data downloaded from <a href="https://github.com/schoolofcities/intro-GIS-workshop-2022/blob/main/toronto.zip">here</a>.</p>
-<p>First, let&#39;s look at data. We have a polygon layer which represents census dissemination areas. These are the smallest geographic level in which demographic and socio-economic data is aggregated for the Canadian census.</p>
+<p>First, let&#39;s look at data. We have a polygon layer which represents census tracts. These data are created by Statistics Canada to share aggregated for the Canadian census. They approximately correspond to neighbourhoods.</p>
 <p>We also have a line layer representing major transit lines in Toronto. We can categorize line data by <code>status</code>, using different colours or line types to display whether the transit route is existing or under construction.</p>
 <p class="img-container"><img src="html/img_qgis_tor.png" alt="vector"></p>
-<p>Also included is a <code>.csv</code> table which contains data linked to the unique identifier, <code>dauid</code>, of each dissemination area. We can use the <code>dauid</code> to join this tabular data to the spatial boundaries of dissemination areas. Do so by, first adding the table as a layer into QGIS. Then open up the properties of the dissemination area boundary, and go to join. Navigate the options by joining the data by <code>dauid</code>. Once complete, we can open up the attribute table and see these additional columns.</p>
-<p>We can now visualize these polygons as a <a href="https://en.wikipedia.org/wiki/Choropleth_map">choropleth map</a>. Similar to the previous tutorial, open up the layer properties, go to symbology, and style based on graduated symbols. Notice the options available for classifying data (number of bins, whether to use quantiles or equal intervals, etc.). Different classification schemes can highlight or hide different spatial patterns. Also, it&#39;s often preferred to visualize a choropleth as a rate or a density (in terms of people per area) in order not to exaggerate counts in larger areas.</p>
-<p>For example, the following shows a choropleth map of the density of the number of people in low-income households per km^2 in Toronto</p>
+<p>Also included is a <code>.csv</code> table which contains data linked to the unique identifier, <code>ctuid</code>, of each census tract. We can use the <code>ctuid</code> to join this tabular data to the spatial boundaries of dissemination areas. Do so by, first adding the table as a layer into QGIS. Then open up the properties of the dissemination area boundary, and go to join. Navigate the options by joining the data by <code>ctuid</code>. Once complete, we can open up the attribute table and see these additional columns.</p>
+<p>We can now visualize these polygons as a <a href="https://en.wikipedia.org/wiki/Choropleth_map">choropleth map</a> (maps where polygons are shaded by attribute values). Similar to the previous tutorial, open up the layer properties, go to symbology, and style based on graduated symbols. Notice the options available for classifying data (number of bins, whether to use quantiles or equal intervals, etc.). Different classification schemes can highlight or hide different spatial patterns. It&#39;s often preferred to visualize a choropleth as a rate or a density (in terms of people per area) in order not to exaggerate counts in larger areas.</p>
+<p>For example, the following shows a choropleth map of the percent of people who live in low-income households by neighbourhood</p>
 <p class="img-container"><img src="html/img_choro.png" alt="vector"></p>
 <hr>
 <h3 id="references:"><a class="header-link" href="#references:"></a>References:</h3>
 <p>Data used in these tutorials:</p>
 <ul class="list">
-<li><a href="https://www12.statcan.gc.ca/census-recensement/2011/geo/bound-limit/bound-limit-eng.cfm">Census boundary data</a> from Statistics Canada</li>
-<li><a href="https://www12.statcan.gc.ca/census-recensement/2011/geo/bound-limit/bound-limit-eng.cfm">Census tabular data</a> from Statistics Canada</li>
+<li><a href="https://www12.statcan.gc.ca/census-recensement/2021/geo/sip-pis/boundary-limites/">Census boundary data</a> from Statistics Canada</li>
+<li><a href="https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/index-eng.cfm">Census tabular data</a> from Statistics Canada</li>
 <li><a href="http://blog.rtwilson.com/john-snows-cholera-data-in-more-formats/">1854 Cholera Data</a> from Robin Wilson</li>
 <li><a href="ttps://github.com/SAUSy-Lab/canada-transit-access">Transit accessibility measures</a> from Jeff Allen</li>
 </ul>
